@@ -1,45 +1,33 @@
-<!-- 
-    <h2 mat-dialog-title>POPUP</h2>
-    <mat-dialog-content>
-        <p>What's your favorite animal?</p>
-        <mat-form-field>
-            <mat-label>Favorite Animal</mat-label>
-            
+<div class="container">
+    <div class="form-section">
+      <mat-dialog-content>
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" placeholder="Enter your email" [(ngModel)]="loginData.email" />
         </mat-form-field>
-    </mat-dialog-content>
-    <mat-dialog-actions>
-        <button mat-button (click)="onNoClick()">No Thanks</button>
-    </mat-dialog-actions> -->
-
-
-
-
-    <div class="container">
-        <div class="form-section">
-          
-          <mat-dialog-content>
-           <mat-form-field appearance="fill" class="full-width">
-              <mat-label>Email</mat-label>
-              <input matInput type="email" placeholder="Enter your email">
-            </mat-form-field>
-            <mat-form-field appearance="fill" class="full-width">
-              <mat-label>Password</mat-label>
-              <input matInput type="password" placeholder="Enter your password">
-            </mat-form-field>
-        
-          </mat-dialog-content>
-          <mat-dialog-actions>
-            <button mat-button class="forgot-password">Forgot password</button>
-            <button 
-                class="w-[10vw] h-[50px] flex items-center justify-center rounded-full bg-blue-500 text-white text-lg font-bold"
-                mat-flat-button >Sign In
-            </button>
-            </mat-dialog-actions>
-        <p class="signup-text">Don’t have an account? <a href="#">Sign up for free!</a></p>
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" placeholder="Enter your password" [(ngModel)]="loginData.password" />
+        </mat-form-field>
+      </mat-dialog-content>
+      <mat-dialog-actions>
+        <button mat-button class="forgot-password">Forgot password</button>
+        <div *ngIf="isLoading" class="loading-spinner">
+          <mat-spinner diameter="30"></mat-spinner> <!-- Indicador de carga -->
         </div>
-        <div class="image-section">
-          <!-- Replace the image URL below with your actual image URL -->
-          <img src="./assets/images/piclogin.jpeg" alt="Athletic Illustration">
-        </div>
-      </div>
-      
+        <button
+          class="w-[10vw] h-[50px] flex items-center justify-center rounded-full bg-blue-500 text-white text-lg font-bold"
+          mat-flat-button
+          [disabled]="isLoading"
+          (click)="onLoginClick()"
+        >
+          Sign In
+        </button>
+      </mat-dialog-actions>
+      <p class="signup-text">Don’t have an account? <a href="#">Sign up for free!</a></p>
+    </div>
+    <div class="image-section">
+      <img src="./assets/images/piclogin.jpeg" alt="Athletic Illustration" />
+    </div>
+  </div>
+  
