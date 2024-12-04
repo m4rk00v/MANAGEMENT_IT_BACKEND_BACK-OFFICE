@@ -1,2 +1,60 @@
-
-<app-content title="Bills"></app-content>
+<div class="flex flex-col items-center py-8 bg-gray-50">
+    <!-- Greeting Section -->
+    <h1 class="text-3xl font-bold mb-8">HELLO !!  <span class="text-indigo-500">{{ info.name }}</span></h1>
+  
+    <!-- Your Models Section -->
+    <div class="bg-white shadow-md rounded-lg w-4/5 mb-8">
+      <h2 class="text-xl font-semibold text-gray-800 p-4">Your models</h2>
+      <table class="w-full border-collapse border border-gray-200 text-left">
+        <thead class="bg-gray-100">
+          <tr>
+            <th class="p-4 text-gray-600">Model Name</th>
+            <th class="p-4 text-gray-600">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-t">
+            <td class="p-4 text-gray-800">Model 1</td>
+            <td class="p-4 flex gap-2">
+              <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Check</button>
+              <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Download</button>
+            </td>
+          </tr>
+          <tr class="border-t">
+            <td class="p-4 text-gray-800">Model 2</td>
+            <td class="p-4 flex gap-2">
+              <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Check</button>
+              <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Download</button>
+            </td>
+          </tr>
+          <tr class="border-t">
+            <td class="p-4 text-gray-800">Model 3</td>
+            <td class="p-4 flex gap-2">
+              <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Check</button>
+              <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Download</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <!-- News Section -->
+    <div class="w-4/5">
+      <h2 class="text-xl font-semibold text-gray-800 mb-4">News</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <h3 class="text-lg font-bold text-gray-700">News 1</h3>
+          <p class="text-gray-600">Description of the news.</p>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <h3 class="text-lg font-bold text-gray-700">News 2</h3>
+          <p class="text-gray-600">Description of the news.</p>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <h3 class="text-lg font-bold text-gray-700">News 3</h3>
+          <p class="text-gray-600">Description of the news.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
