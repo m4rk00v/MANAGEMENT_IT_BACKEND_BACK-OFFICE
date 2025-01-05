@@ -14,6 +14,9 @@ public class ModelConfig : IEntityTypeConfiguration<Model>
         builder.Property(x => x.Name)
             .HasMaxLength(100)
             .IsRequired();
+        
+        builder.Property(x => x.Size)
+            .IsRequired();
 
         builder.Property(x => x.CreatedAt)
             .IsRequired();
@@ -24,3 +27,6 @@ public class ModelConfig : IEntityTypeConfiguration<Model>
             .OnDelete(DeleteBehavior.Cascade);
     }
 }
+
+// dotnet ef migrations add addColOnModel
+//  dotnet ef database update 
